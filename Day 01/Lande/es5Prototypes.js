@@ -1,15 +1,15 @@
-    function Vehicle(name, type) {
-    
-        this.name = name;
-        this.type = type;
-    }
+function Vehicle(name, type) {
 
-    Vehicle.prototype.getName = function () {
-        return this.name;
-    }
-    Vehicle.prototype.getType = function () {
-        return this.type;
-    }
+    this.name = name;
+    this.type = type;
+}
+
+Vehicle.prototype.getName = function () {
+    return this.name;
+}
+Vehicle.prototype.getType = function () {
+    return this.type;
+}
 
 function Car(name, dvd) {
     this.dvd = dvd;
@@ -18,7 +18,7 @@ function Car(name, dvd) {
 
 Car.prototype = Object.create(Vehicle.prototype);
 
-Car.prototype.getDvd = function() {
+Car.prototype.getDvd = function () {
     return this.dvd;
 }
 

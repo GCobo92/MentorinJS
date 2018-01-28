@@ -1,25 +1,26 @@
-function ps4(name, type) {
-    this.wifi = wifi;
-    this.type = type;
+function ps4(wifi, portatil) {
+
+    this.wifi = true;
+    this.portatil = false;
 }
 
-console.prototype.getName = function() {
-    return this.name;
+ps4.prototype.getWifi = function () {
+    return this.wifi;
 }
 
-console.prototype.getType = function() {
-    return this.type;
-}
-
-function psp(portatil) {
-    this.portatil = portatil;
-    ps4.call(this,wifi, 'wifi');
-}
-
-psp.prototype = object.create(ps4.prototype);
-
-psp.prototype.getPortatil = function() {
+ps4.prototype.getPortatil = function () {
     return this.portatil;
 }
 
-psp.prototype.constructor = Psp;
+function psp(color, portatil) {
+    this.portatil = true;
+    ps4.call(this, color, 'black');
+}
+
+psp.prototype = Object.create(ps4.prototype);
+
+psp.prototype.getColor() = function () {
+    return this.color;
+}
+
+psp.prototype.constructor = psp;
